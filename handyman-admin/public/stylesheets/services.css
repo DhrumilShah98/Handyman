@@ -1,0 +1,42 @@
+.img-thumbnail {
+	padding: 0;
+}
+
+.img-thumbnail img {
+	height: 200px;
+	width: 100%;
+}
+
+.jumbotron {
+	margin-top: 16px;
+	color: #ffffff;
+	background: #3C88C2;
+}
+
+.jumbotron h1 {
+	text-transform: uppercase;
+	text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.4);
+}
+
+.jumbotron p {
+	font-size: 1em;
+}
+
+.jumbotron .float-left {
+	margin-right: 16px;
+	margin-bottom: 8px;
+}
+
+.jumbotron .btn {
+	width: 240px;
+}
+
+.img-thumbnail h4 {
+	font-size: 1em;
+}
+
+/* padding-bottom to arrange the footer properly */
+
+.services-container {
+	padding-bottom: 112px;
+}

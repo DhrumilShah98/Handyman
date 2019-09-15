@@ -1,0 +1,62 @@
+html, body {
+	overflow-x: hidden;
+}
+
+body {
+	background-image: url("/assets/images/landing/landing_image_1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #f8f8f8;
+}
+
+h1, h3, hr {
+	text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 3.5em;
+	text-transform: uppercase;
+}
+
+hr {
+	height: 1px;
+	width: 400px;
+	background: #f8f8f8;
+}
+
+@media(max-width: 430px) {
+	hr {
+		width: 100%;
+	}
+}
+
+/* padding-bottom to arrange the footer properly */
+
+.landing-container {
+	padding-bottom: 215px;
+}
+
+#contentCenter {
+	padding-top: 25%;
+}
+
+#contentCenter a {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.8);
+	border: 2px solid transparent;
+	outline: 0;
+}
+
+#contentCenter a:hover, #contentCenter a:focus {
+	background: transparent;
+	color: #f8f8f8;
+	border: 2px solid #f8f8f8;
+	transition: all ease-in .2s;
+}
+
+#contentCenter i {
+	margin-right: 6px;
+}

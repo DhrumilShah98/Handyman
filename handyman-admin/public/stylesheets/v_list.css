@@ -1,0 +1,24 @@
+/* padding-bottom to arrange the footer properly */
+
+.vendors-list-container {
+	margin-top: 32px;
+	padding-bottom: 120px;
+}
+
+h2, h5 {
+	margin: 0px;
+}
+
+h2 {
+	font-weight: bold;
+}
+
+h5 {
+	margin-bottom: 8px;
+	text-align: right;
+	padding-right: 48px;
+}
+
+.btn {
+	margin-top: 8px;
+}

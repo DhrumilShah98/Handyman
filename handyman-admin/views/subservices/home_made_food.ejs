@@ -1,0 +1,60 @@
+<% include ../partials/header %>
+
+<link rel="stylesheet" href="/stylesheets/subservices.css" />
+<title>Handyman: Home Made Food</title>
+<% include ../partials/navbar %>
+
+<div class="container">
+	<header class="jumbotron">
+		<div class="container">
+			<h1>Home Made Food</h1>
+			<div class="form-group" style="width: 240px"
+				onchange="javascript:location.href = $('#home_made_food :selected').val()">
+				<select class="form-control" name="home_made_food" id="home_made_food">
+					<option value="/home_made_food/cakes_and_chocolates">Cakes and Chocolates</option>
+					<option value="/home_made_food/different_pickles">Different Pickles</option>
+					<option value="/home_made_food/home_made_snacks">Home made Snacks</option>
+					<option value="/home_made_food/tiffin_services">Tiffin Services</option>
+				</select>
+			</div>
+		</div>
+	</header>
+
+	<% 
+		var imageArr = [
+			"cakes_chocolates.png",
+			"pickles.png",
+			"home_made_snacks.png",
+			"tiffin.png"
+		];
+
+		var nameArr = [
+			"Cakes and Chocolates",
+			"Different Pickles",
+			"Home Made Snacks",
+			"Tiffin Services"
+		];
+
+		var subserviceArr = [
+			"cakes_and_chocolates",
+			"different_pickles",
+			"home_made_snacks",
+			"tiffin_services"
+		];
+	%>
+	<div class="row text-center sub-service-container">
+		<% for(var i = 0 ; i  < imageArr.length ; i++){ %>
+		<div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6 margin-bottom-16">
+			<a href="/home_made_food/<%= subserviceArr[i] %>">
+				<div class="sub-service-content">
+					<img class="sub-service-image"
+						src="/assets/images/subservices/home_made_food/<%= imageArr[i]  %>" />
+					<p class="sub-service-name"><%= nameArr[i] %></p>
+				</div>
+			</a>
+		</div>
+		<% } %>
+	</div>
+</div>
+
+<% include ../partials/footer %>

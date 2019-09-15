@@ -1,0 +1,112 @@
+<% include ../partials/header %>
+<title>Handyman: <%= vendor.fname %> <%= vendor.lname %></title>
+<link rel="stylesheet" href="/stylesheets/v_show.css" />
+<link rel="stylesheet" href="/stylesheets/image_style.css" />
+<% include ../partials/navbar %>
+
+<div class="container show-vendor-container">
+    <div class="row">
+        <div class="vendor-left-container col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="container">
+                <div class="vendor-image-div">
+                    <div class="vendor-image"><img src="<%= vendor.image %>" alt=""></div>
+                </div>
+                <div class="text-center vendor-name-div">
+                    <h1><%= vendor.fname %> <%= vendor.lname %></h1>
+                </div>
+                <div class="vendor-address-div">
+                    <p class="vendor-address-label">ADDRESS</p>
+                    <p class="vendor-address-content"><%= vendor.address %> <%= vendor.area %>, <%= vendor.city %>,
+                        <%= vendor.state %> <%= vendor.pincode %></p>
+                </div>
+                <div class="vendor-email-div">
+                    <p class="vendor-email-label"><a role="button" class="btn btn-sm btn-primary"
+                            href="mailto:<%= vendor.email %>"><i class="fa fa-envelope"></i> Email</a></p>
+                    <p class="vendor-email-content"><%= vendor.email %></p>
+                </div>
+                <div class="vendor-mobile-div">
+                    <p class="vendor-mobile-label"><a role="button" class="btn btn-sm btn-primary"
+                            href="tel: +91<%= vendor.mobile %>"><i class="fa fa-phone"></i> Mobile</a></p>
+                    <p class="vendor-mobile-content">+91 <%= vendor.mobile %></p>
+                </div>
+            </div>
+        </div>
+        <div class="vendor-right-container col-xl-8 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="container">
+                <div class="vendor-description-div">
+                    <p class="vendor-description-label">SOMETHING ABOUT ME</p>
+                    <p class="vendor-description-content"><%= vendor.description %></p>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-7 col-md-12 col-sm-12 col-12">
+                        <div class="vendor-experience-div">
+                            <p class="vendor-experience-label">EXPERIENCE IN THIS FIELD</p>
+                            <p class="vendor-experience-content"><%= vendor.experience %> years</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-3 col-md-12 col-sm-12 col-12">
+                        <div class="vendor-visitcharge-div">
+                            <p class="vendor-visitcharge-label">VISIT CHARGE</p>
+                            <p class="vendor-visitcharge-content"><%= vendor.visitCharge %></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
+                        <div class="vendor-rating-div">
+                            <p class="vendor-rating-label">RATINGS</p>
+                            <p class="vendor-rating-content">4.8 / 5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <% if(!vendor.isApproved) { %>
+                    <div style="margin-top: 16px;" class="col-12 col-lg-4">
+                        <form action="/vendor/<%= vendor._id %>/approve?_method=PUT" method="POST">
+                            <button type="submuit" class="btn btn-lg btn-primary btn-block">APPROVE VENDOR</button>
+                        </form>
+                    </div>
+                    <% } %>
+                    <div style="margin-top: 16px;" class="col-12 col-lg-4">
+                        <a href="/vendor/<%= vendor._id %>/edit" class="btn btn-lg btn-warning btn-block">EDIT
+                            VENDOR</a>
+                    </div>
+                    <div style="margin-top: 16px;" class="col-12 col-lg-4">
+                        <form action="/vendor/<%= vendor._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-lg btn-danger btn-block">DELETE VENDOR</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-body bg-light">
+            <div class="row">
+                <div class="col-12 col-sm-8 col-md-8">
+                    <h2>Comments</h2>
+                </div>
+            </div>
+            <hr>
+            <% vendor.comments.forEach(function(comment){ %>
+            <div class="row">
+                <div class="col-md-12">
+                    <strong><%= comment.author.fname %> <%= comment.author.lname %></strong>
+                    @<em><%= comment.author.username %></em>
+                    <span class="float-right"><%= comment.created.toDateString()%>
+                        @<strong><%= comment.created.toLocaleTimeString()%></strong></span>
+                    <p style="clear: both;">
+                        <%= comment.text %>
+                    </p>
+                    <a class="btn btn-sm btn-warning float-left"
+                        href="/<%= vendor.service %>/<%= vendor.subservice %>/<%= vendor._id %>/comments/<%= comment._id%>/edit">
+                        Edit
+                    </a>
+                    <form class="delete-form"
+                        action="/<%= vendor.service %>/<%= vendor.subservice %>/<%= vendor._id %>/comments/<%= comment._id%>?_method=DELETE"
+                        method="POST">
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+
+    <% include ../partials/footer %>

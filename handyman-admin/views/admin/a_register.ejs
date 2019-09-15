@@ -1,0 +1,44 @@
+<% include ../partials/header %>
+
+<title>Handyman: Admin Registeration</title>
+<link rel="stylesheet" href="/stylesheets/form.css" />
+
+<% include ../partials/navbar %>
+<div class="container form-content">
+    <h1 class="text-center">Admin Register</h1>
+    <div class="form-container">
+        <form action="/admin/register" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" maxlength="30" name="fname" placeholder="First Name" required
+                    autofocus>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" maxlength="30" name="lname" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" maxlength="35" name="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="email" maxlength="254" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="email" maxlength="254" name="confirmemail" placeholder="Confirm Email"
+                    required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" minlength="8" maxlength="30" name="password"
+                    placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" minlength="8" maxlength="30" name="confirmpassword"
+                    placeholder="Confirm Password" required>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Register</button>
+            </div>
+        </form>
+        <p>Already have an account? <a href="/admin/login">Login!</a>
+    </div>
+</div>
+
+<% include ../partials/footer %>

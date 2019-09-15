@@ -1,0 +1,11 @@
+.form-container {
+	width: 80%;
+	margin: 25px auto;
+}
+
+/* padding-bottom to arrange the footer properly */
+
+.form-content {
+	margin-top: 32px;
+	padding-bottom: 96px;
+}

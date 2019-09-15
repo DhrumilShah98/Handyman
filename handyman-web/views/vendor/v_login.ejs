@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+<meta name="description"
+	content="Handyman: Vendor Login: Vendor login page. Login as vendor to see your profile. Also, find out all the local vendors near you.">
+<title>Handyman: Customer Forgot Password</title>
+<title>Handyman: Vendor Login</title>
+<link rel="stylesheet" href="/stylesheets/form.css" />
+
+<% include ../partials/navbar %>
+
+<div class="container form-content">
+	<h1 class="text-center">Login as Vendor</h1>
+	<div class="form-container">
+		<form action="/vendor/login" method="POST">
+			<div class="form-group">
+				<input class="form-control" type="text" name="username" placeholder="Username" autofocus>
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="password" name="password" placeholder="Password">
+			</div>
+			<div class="form-group">
+				<button class="btn btn-lg btn-primary btn-block">Login!</button>
+			</div>
+		</form>
+		<a href="/vendor/forgot">Forgot Password?</a>
+		<p>Don't have an account? <a href="/vendor/register">Register</a></p>
+	</div>
+</div>
+
+<% include ../partials/footer %>

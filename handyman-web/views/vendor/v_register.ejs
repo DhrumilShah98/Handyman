@@ -1,0 +1,142 @@
+<% include ../partials/header %>
+
+<meta name="description"
+	content="Handyman: Vendor Registeration: Vendor registeration page. Register as vendor and expand your business by getting called from customers near you who are looking for local services.">
+<title>Handyman: Vendor Registeration</title>
+<link rel="stylesheet" href="/stylesheets/form.css" />
+
+<% include ../partials/navbar %>
+
+<div class="container form-content">
+	<h1 class="text-center">Register as Vendor</h1>
+	<div class="form-container">
+		<form action="/vendor/register" method="POST" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="image">Enter Your Image</label>
+				<input type="file" id="image" name="image" accept="image/*" required autofocus>
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="text" maxlength="30" name="fname" placeholder="First Name" required>
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="text" maxlength="30" name="lname" placeholder="Last Name" required>
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="text" maxlength="35" name="username" placeholder="Username" required>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<div class="form-group">
+							<input class="form-control" type="email" maxlength="254" name="email" placeholder="Email"
+								required>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<div class="form-group">
+							<input class="form-control" type="email" maxlength="254" name="confirmemail"
+								placeholder="Confirm Email" required>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<div class="form-group">
+							<input class="form-control" type="password" minlength="8" maxlength="30" name="password"
+								placeholder="Password" required>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<div class="form-group">
+							<input class="form-control" type="password" minlength="8" maxlength="30"
+								name="confirmpassword" placeholder="Confirm Password" required>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="text" maxlength="80" name="address" placeholder="Address" required>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<div class="form-group">
+							<input class="form-control" type="text" maxlength="30" name="area" placeholder="Area"
+								required>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<div class="form-group">
+							<input class="form-control" type="text" maxlength="30" name="city" placeholder="City"
+								required>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<div class="form-group">
+							<input class="form-control" type="text" maxlength="30" name="state" placeholder="State"
+								required>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<div class="form-group">
+							<input class="form-control" type="text" maxlength="6" name="pincode" placeholder="Pincode"
+								required>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="text" maxlength="10" name="mobile" placeholder="Mobile Number"
+					required>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<div class="form-group">
+							<select class="form-control" name="service" id="service" required>
+								<option value="">Service</option>
+								<option value="beauty">Beauty</option>
+								<option value="appliance_repair">Appliance Repair</option>
+								<option value="home_cleaning_repair">Home Cleaning And Repair</option>
+								<option value="home_made_food">Home Made Food</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<div class="form-group">
+							<select class="form-control" name="subservice" id="subService" required>
+								<option value="">Sub Service</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<textarea class="form-control" name="description"
+					placeholder="Describe About Your Work Here. Remember, Customer Will Judge You Based On This"
+					rows="10" minlength="500" maxlength="1500"></textarea>
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="number" name="experience" placeholder="Years Of Experience" min="0"
+					max="80" required>
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="number" name="visitCharge" placeholder="Home Visit Charge" min="0"
+					max="1000" required>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-lg btn-primary btn-block">Register</button>
+			</div>
+		</form>
+		<p>Already have an account? <a href="/vendor/login">Login!</a>
+	</div>
+</div>
+<script type="text/javascript" src="/scripts/select_sub_service.js"></script>
+
+<% include ../partials/footer %>

@@ -1,0 +1,89 @@
+<% include ../partials/header %>
+<title>Handyman: Edit Vendor</title>
+<link rel="stylesheet" href="/stylesheets/image_style.css" />
+<link rel="stylesheet" href="/stylesheets/form.css" />
+<% include ../partials/navbar %>
+
+<div class="container form-content">
+    <div class="vendor-image-div">
+        <div class="vendor-image"><img src="<%= currentVendor.image %>" alt=""></div>
+    </div>
+    <h1 class="text-center">Edit <strong><%= currentVendor.username %></strong></h1>
+    <div class="form-container">
+        <form action="/vendor/<%= currentVendor._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="image">Change Image</label>
+                <input type="file" id="image" name="image" accept="image/*" autofocus>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="fname" maxength="30" value="<%= currentVendor.fname %>"
+                    required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="lname" maxength="30" value="<%= currentVendor.lname %>"
+                    required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="email" maxength="254" value="<%= currentVendor.email %>"
+                    required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="address" mxlength="80"
+                    value="<%= currentVendor.address %>" required>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="area" maxlngth="30"
+                                value="<%= currentVendor.area %>" required>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="city" maxlngth="30"
+                                value="<%= currentVendor.city %>" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="state" maxength="30"
+                                value="<%= currentVendor.state %>" required>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="pincode" mxlength="6"
+                                value="<%= currentVendor.pincode %>" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="mobile" malength="10" value="<%= currentVendor.mobile %>"
+                    required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" name="description" rows="10" minlength="500" maxlength="1500"
+                    required><%= currentVendor.description %></textarea>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="number" name="experience" value="<%= currentVendor.experience %>"
+                    min="0" max="80" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="number" name="visitCharge" value="<%= currentVendor.visitCharge %>"
+                    min="0" max="1000" required>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Update My Profile!</button>
+            </div>
+        </form>
+        <a href="/services">Cancel</a>
+    </div>
+</div>
+<% include ../partials/footer %>

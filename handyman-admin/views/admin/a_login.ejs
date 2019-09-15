@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+
+<title>Handyman: Admin Login</title>
+<link rel="stylesheet" href="/stylesheets/form.css" />
+
+<% include ../partials/navbar %>
+
+<div class="container form-content">
+	<h1 class="text-center">Admin Login</h1>
+	<div class="form-container">
+		<form action="/admin/login" method="POST">
+			<div class="form-group">
+				<input class="form-control" type="text" name="username" placeholder="Username" required autofocus>
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="password" name="password" placeholder="Password" required>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-lg btn-primary btn-block">Login!</button>
+			</div>
+		</form>
+		<a href="/admin/forgot">Forgot Password?</a>
+		<!-- <p>Don't have an account? <a href="/admin/register">Register</a></p> -->
+	</div>
+</div>
+
+<% include ../partials/footer %>

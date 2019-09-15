@@ -1,0 +1,154 @@
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  /* fallback for old browsers */
+  background: #D3CCE3;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+}
+
+.navbar {
+  background-color: #E9ECEF;
+}
+
+.navbar-brand {
+  margin-top: 4px;
+}
+
+.handyman-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.site-footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #E9ECEF;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.site-footer .social-icons {
+  text-align: right
+}
+
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  margin-right: 0;
+  border-radius: 100%;
+}
+
+.copyright-text {
+  padding-bottom: 6px;
+  font-size: 13px;
+  color: #181819;
+  margin: 0;
+}
+
+@media (max-width:768px) {
+  .site-footer .copyright-text, .site-footer .social-icons {
+    text-align: center
+  }
+}
+
+@media (min-width:768px) {
+  .copyright-text {
+    line-height: 35px;
+  }
+}
+
+@media (min-width:992px) {
+  .copyright-text {
+    font-size: 16px;
+  }
+}
+
+.social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px
+}
+
+.social-icons a {
+  background-color: #E9ECEF;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear
+}
+
+.social-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.social-icons a.facebook:hover {
+  background-color: #3b5998
+}
+
+.social-icons a.twitter:hover {
+  background-color: #00aced
+}
+
+.social-icons a.linkedin:hover {
+  background-color: #007bb6
+}
+
+.social-icons a.googleplus:hover {
+  background-color: #dd5144
+}
+
+.social-icons a.youtube:hover {
+  background-color: #ff0000
+}
+
+.social-icons a.instagram:hover {
+  background: #833ab4;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@media (max-width:767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600
+  }
+}

@@ -1,0 +1,53 @@
+/* padding-bottom to arrange the footer properly */
+
+.show-vendor-container {
+    margin-top: 32px;
+    padding-bottom: 120px;
+}
+
+.vendor-name-div h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 auto;
+    letter-spacing: 2px;
+}
+
+.vendor-address-label, .vendor-email-label, .vendor-mobile-label {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 24px auto 0 auto;
+    text-align: justify;
+}
+
+.vendor-address-content, .vendor-email-content, .vendor-mobile-content {
+    color: #000;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.vendor-right-container {
+    margin-top: 32px;
+}
+
+.vendor-description-label, .vendor-experience-label, .vendor-visitcharge-label, .vendor-rating-label {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 24px auto 0 auto;
+    text-align: left;
+}
+
+.vendor-description-content, .vendor-experience-content, .vendor-visitcharge-content, .vendor-rating-content {
+    color: #000;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.card {
+    margin: 32px auto 0 auto;
+}
+
+.btn-warning {
+    margin-right: 8px;
+}

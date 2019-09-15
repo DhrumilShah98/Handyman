@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HandymanApp</string>
+
+    <!--activity_main.xml-->
+    <string name="handyman_favicon">Handyman Favicon</string>
+
+    <!--main_menu.xml-->
+    <string name="backward">Backward</string>
+    <string name="forward">Forward</string>
+    <string name="refresh">Refresh</string>
+</resources>

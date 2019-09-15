@@ -1,0 +1,73 @@
+<% include ../partials/header %>
+
+<link rel="stylesheet" href="/stylesheets/subservices.css" />
+<title>Handyman: Appliance Repair</title>
+
+<% include ../partials/navbar %>
+
+<div class="container">
+	<header class="jumbotron">
+		<div class="container">
+			<h1>Appliance Repair</h1>
+			<div class="form-group" style="width: 240px"
+				onchange="javascript:location.href = $('#appliance_repair :selected').val()">
+				<select class="form-control" name="appliance_repair" id="appliance_repair">
+					<option value="/appliance_repair/ro_water_purifier_repair">RO or Water Purifier Repair</option>
+					<option value="/appliance_repair/ac_service_repair">AC Service and Repair</option>
+					<option value="/appliance_repair/washing_machine_repair">Washing Machine Repair</option>
+					<option value="/appliance_repair/refrigerator_repair">Refrigerator Repair</option>
+					<option value="/appliance_repair/microwave_repair">Microwave Repair</option>
+					<option value="/appliance_repair/air_cooler_repair">Air Cooler Repair</option>
+					<option value="/appliance_repair/geyser_water_heater_repair">Geyser/ Water Heater Repair</option>
+				</select>
+			</div>
+		</div>
+	</header>
+
+	<% 
+		var imageArr = [
+			"water_purifier.png",
+			"air_conditioner.png",
+			"washing_machine.png",
+			"refrigerator.png",
+			"microwave.png",
+			"air_cooler.png",
+			"water_heater.png"
+		];
+
+		var nameArr = [
+			"RO or Water Purifier Repair",
+			"AC Service and Repair",
+			"Washing Machine Repair",
+			"Refrigerator Repair",
+			"Microwave Repair",
+			"Air Cooler Repair",
+			"Geyser/ Water Heater Repair"
+		];
+
+		var subserviceArr = [
+			"ro_water_purifier_repair",
+			"ac_service_repair",
+			"washing_machine_repair",
+			"refrigerator_repair",
+			"microwave_repair",
+			"air_cooler_repair",
+			"geyser_water_heater_repair"
+		];
+	%>
+	<div class="row text-center sub-service-container">
+		<% for(var i = 0 ; i  < imageArr.length ; i++){ %>
+		<div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6 margin-bottom-16">
+			<a href="/appliance_repair/<%= subserviceArr[i] %>">
+				<div class="sub-service-content">
+					<img class="sub-service-image"
+						src="/assets/images/subservices/appliance_repair/<%= imageArr[i]  %>" />
+					<p class="sub-service-name"><%= nameArr[i] %></p>
+				</div>
+			</a>
+		</div>
+		<% } %>
+	</div>
+</div>
+
+<% include ../partials/footer %>

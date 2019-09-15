@@ -1,0 +1,65 @@
+<% include ../partials/header %>
+
+<meta name="description"
+    content="Handyman: Beauty: Check out different beauty services such as Salon at Home, Hair Artist, Hair/Hand Mehndi, and many more.">
+<link rel="stylesheet" href="/stylesheets/subservices.css" />
+<title>Handyman: Beauty</title>
+
+<% include ../partials/navbar %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Beauty</h1>
+            <div class="form-group" style="width: 240px"
+                onchange="javascript:location.href = $('#beauty :selected').val()">
+                <select class="form-control" name="beauty" id="beauty">
+                    <option value="/beauty/salon_at_home">Salon at Home</option>
+                    <option value="/beauty/hair_artist">Hair artist</option>
+                    <option value="/beauty/hair_hand_mehndi">Hair/Hand Mehndi</option>
+                    <option value="/beauty/bridal_makeup_dressup_artist">Bridal Makeup/ DressUp Artist</option>
+                    <option value="/beauty/groom_makeup_dressup_artist">Groom Makeup/ DressUp Artist</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <% 
+		var imageArr = [
+			"salon_at_home.png",
+			"hair_artist.png",
+			"hand_mehndi.png",
+			"bridal_makeup.png",
+			"groom_makeup.png"
+		];
+
+		var nameArr = [
+			"Salon at Home",
+			"Hair Artist",
+			"Hair/Hand Mehndi",
+			"Bridal Makeup/ DressUp Artist",
+			"Groom Makeup/ DressUp Artist"
+		];
+
+		var subserviceArr = [
+			"salon_at_home",
+			"hair_artist",
+			"hair_hand_mehndi",
+			"bridal_makeup_dressup_artist",
+			"groom_makeup_dressup_artist"
+		];
+	%>
+    <div class="row text-center sub-service-container">
+        <% for(var i = 0 ; i  < imageArr.length ; i++){ %>
+        <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6 margin-bottom-16">
+            <a href="/beauty/<%= subserviceArr[i] %>">
+                <div class="sub-service-content">
+                    <img class="sub-service-image" src="/assets/images/subservices/beauty/<%= imageArr[i]  %>" />
+                    <p class="sub-service-name"><%= nameArr[i] %></p>
+                </div>
+            </a>
+        </div>
+        <% } %>
+    </div>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+<title>Handyman: All Customers</title>
+<link rel="stylesheet" href="/stylesheets/c_list.css" />
+<% include ../partials/navbar %>
+
+<div class="container customers-list-container">
+    <div class="row">
+        <% customers.forEach(function(customer){ %>
+        <div class="col-12 col-md-6">
+            <div class="card bg-light mb-3">
+                <div class="card-header">
+                    <%= customer.username %>
+                    <div class="float-right">
+                        <%= customer.created.toDateString() %>@<%= customer.created.toLocaleTimeString() %></div>
+                </div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title"><%= customer.fname %> <%= customer.lname %></h5>
+                    <div class="card-text"><%= customer.email %></div>
+                    <form action="/customer/<%= customer._id %>?_method=delete" method="POST">
+                        <button type="submit" class="float-right btn btn-outline-dark btn-sm"><i
+                                class="fas fa-trash-alt"></i></button>
+                    </form>
+                    <form action="/customer/<%= customer._id %>/edit" method="GET">
+                        <button type="submit" class="mr-2 float-right btn btn-outline-dark btn-sm"><i
+                                class="fas fa-edit"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+<% include ../partials/footer %>

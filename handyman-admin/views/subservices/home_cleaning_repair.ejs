@@ -1,0 +1,87 @@
+<% include ../partials/header %>
+
+<meta name="description"
+	content="Handyman: Home Cleaning and Repair: Check out different home cleaning and repair services such as Carpentry, Electrical, Plumbing and many more.">
+<link rel="stylesheet" href="/stylesheets/subservices.css" />
+<title>Handyman: Home Cleaning & Repair</title>
+<% include ../partials/navbar %>
+
+<div class="container">
+	<header class="jumbotron">
+		<div class="container">
+			<h1>Home Cleaning And Repair</h1>
+			<div class="form-group" style="width: 240px"
+				onchange="javascript:location.href = $('#home_cleaning_repair :selected').val()">
+				<select class="form-control" name="home_cleaning_repair" id="home_cleaning_repair">
+					<option value="/home_cleaning_repair/carpentry">Carpentry</option>
+					<option value="/home_cleaning_repair/electrical">Electrical</option>
+					<option value="/home_cleaning_repair/plumbing">Plumbing</option>
+					<option value="/home_cleaning_repair/home_deep_cleaning">Home Deep Cleaning</option>
+					<option value="/home_cleaning_repair/kitchen_deep_cleaning">Kitchen Deep Cleaning</option>
+					<option value="/home_cleaning_repair/bathroom_deep_cleaning">Bathroom Deep Cleaning</option>
+					<option value="/home_cleaning_repair/car_cleaning">Car Cleaning</option>
+					<option value="/home_cleaning_repair/pest_control">Pest Control</option>
+					<option value="/home_cleaning_repair/painting">Painting</option>
+					<option value="/home_cleaning_repair/furniture_shampooing_cleaning">Furniture Shampooing and
+						Cleaning</option>
+				</select>
+			</div>
+		</div>
+	</header>
+
+	<% 
+		var imageArr = [
+			"carpentry.png",
+			"electrical.png",
+			"plumbing.png",
+			"home_cleaning.png",
+			"kitchen_cleaning.png",
+			"bathroom_cleaning.png",
+			"car_cleaning.png",
+			"pest_control.png",
+			"painting.png",
+			"furniture_shampoo_clean.png"
+		];
+
+		var nameArr = [
+			"Carpentry",
+			"Electrical",
+			"Plumbing",
+			"Home Deep Cleaning",
+			"Kitchen Deep Cleaning",
+			"Bathroom Deep Cleaning",
+			"Car Cleaning",
+			"Pest Control",
+			"Painting",
+			"Furniture Shampooing and Cleaning"
+		];
+
+		var subserviceArr = [
+			"carpentry",
+			"electrical",
+			"plumbing",
+			"home_deep_cleaning",
+			"kitchen_deep_cleaning",
+			"bathroom_deep_cleaning",
+			"car_cleaning",
+			"pest_control",
+			"painting",
+			"furniture_shampooing_cleaning"
+		];
+	%>
+	<div class="row text-center sub-service-container">
+		<% for(var i = 0 ; i  < imageArr.length ; i++){ %>
+		<div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6 margin-bottom-16">
+			<a href="/home_cleaning_repair/<%= subserviceArr[i] %>">
+				<div class="sub-service-content">
+					<img class="sub-service-image"
+						src="/assets/images/subservices/home_cleaning_repair/<%= imageArr[i]  %>" />
+					<p class="sub-service-name"><%= nameArr[i] %></p>
+				</div>
+			</a>
+		</div>
+		<% } %>
+	</div>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,95 @@
+.jumbotron {
+	margin-top: 16px;
+	color: #ffffff;
+	background: #3C88C2;
+}
+
+.jumbotron h1 {
+	text-transform: uppercase;
+	text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.4);
+}
+
+.author_quote, .author_name {
+	margin: 0px;
+}
+
+.author_quote {
+	text-align: justify;
+	font-size: 1.3em;
+}
+
+.author_name {
+	text-align: right;
+}
+
+.margin-bottom-16 {
+	margin-bottom: 16px;
+}
+
+.sub-service-container a {
+	text-decoration: none;
+}
+
+.sub-service-content {
+	margin: 0px auto;
+	background: #E9ECEF;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	border-radius: 5px;
+	width: 160px;
+	height: 160px;
+}
+
+.sub-service-content p {
+	padding: 0px;
+	margin: 0px;
+	color: rgb(60, 136, 194);
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/*@media (max-width: 360px){
+	.sub-service-content{
+		width: 250px;
+		height: 250px;
+	}
+
+	img{
+		width: 150px;
+		height: auto;
+	}
+
+	.sub-service-content p{
+		font-size: 1.5em;
+	}
+}
+
+@media (min-width: 360px) and (max-width: 575px){
+	.sub-service-content{
+		width: 300px;
+		height: 300px;
+	}
+
+	.sub-service-image{
+		padding-top: 18px;
+	}
+	img{
+		width: 180px;
+		height: auto;
+	}
+
+	.sub-service-content p{
+		font-size: 1.6em;
+	}	
+}
+.sub-service-content img{
+	margin-top: 12px;
+}
+*/
+
+/* padding-bottom to arrange the footer properly */
+
+.sub-service-container {
+	padding-bottom: 104px;
+}

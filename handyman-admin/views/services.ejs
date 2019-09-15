@@ -1,0 +1,67 @@
+<% include partials/header %>
+
+<link rel="stylesheet" href="/stylesheets/services.css" />
+<title>Handyman: Services</title>
+
+<% include partials/navbar %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to Handyman</h1>
+            <p>No Work Is Small We Serve Them All</p>
+            <% if(!currentUser){ %>
+            <div><a class="btn btn-outline-light btn-md" href="/admin/login">LOGIN AS ADMIN</a></div>
+            <% } %>
+        </div>
+    </header>
+
+    <div class="row text-center services-container">
+        <div class="col-lg-3 col-md-6 col-sm-6  mb-3">
+            <div class="img-thumbnail">
+                <img class="img-fluid" src="../assets/images/services/beauty.jpg" />
+                <div class="caption">
+                    <h4>Beauty</h4>
+                </div>
+                <p>
+                    <a href="/services/beauty" class="btn btn-outline-primary">More Info</a>
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+            <div class="img-thumbnail">
+                <img class="img-fluid" src="../assets/images/services/appliance_repair.jpg" />
+                <div class="caption">
+                    <h4>Appliance Repair</h4>
+                </div>
+                <p>
+                    <a href="/services/appliance_repair" class="btn btn-outline-primary">More Info</a>
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+            <div class="img-thumbnail">
+                <img class="img-fluid" src="../assets/images/services/home_cleaning_repair.jpg" />
+                <div class="caption">
+                    <h4>Home Cleaning & Repair</h4>
+                </div>
+                <p>
+                    <a href="/services/home_cleaning_repair" class="btn btn-outline-primary">More Info</a>
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+            <div class="img-thumbnail">
+                <img class="img-fluid" src="../assets/images/services/cakes_chocolates.jpg" />
+                <div class="caption">
+                    <h4>Home Made Food</h4>
+                </div>
+                <p>
+                    <a href="/services/home_made_food" class="btn btn-outline-primary">More Info</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>

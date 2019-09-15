@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<meta name="description"
+	content="Handyman: Customer Login: Customer login page. Login as customer to see detailed information for all the vendors. Find out all the local vendors near you and get your service done from them.">
+<title>Handyman: Customer Login</title>
+<link rel="stylesheet" href="/stylesheets/form.css" />
+
+<% include ../partials/navbar %>
+
+<div class="container form-content">
+	<h1 class="text-center">Login as Customer</h1>
+	<div class="form-container">
+		<form action="/customer/login" method="POST">
+			<div class="form-group">
+				<input class="form-control" type="text" name="username" placeholder="Username" required autofocus>
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="password" name="password" placeholder="Password" required>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-lg btn-primary btn-block">Login!</button>
+			</div>
+		</form>
+		<a href="/customer/forgot">Forgot Password?</a>
+		<p>Don't have an account? <a href="/customer/register">Register</a></p>
+	</div>
+</div>
+
+<% include ../partials/footer %>

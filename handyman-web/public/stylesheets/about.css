@@ -1,0 +1,78 @@
+.what-is-handyman-container {
+	margin-top: 16px;
+	color: #ffffff;
+	background: #3C88C2;
+}
+
+.objective-container {
+	background: #E9ECEF;
+}
+
+.what-is-handyman-container h1, .objective-container h1, .team-container h1 {
+	margin-bottom: 16px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.what-is-handyman-container h1 {
+	text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.4);
+}
+
+.objective-container h1, .team-container h1 {
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.2), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.what-is-handyman-container p, .objective-container p {
+	text-align: justify;
+	letter-spacing: 2px;
+}
+
+.team-container {
+	padding: 30px 0 60px 0;
+	text-align: center;
+}
+
+.team-member {
+	margin-bottom: 16px;
+	height: 100%;
+}
+
+.team-member img {
+	width: 90%;
+	height: 70%;
+	box-shadow: 8px 8px 12px rgb(60, 136, 194);
+	border-radius: 100%;
+	margin: 0 1.25%;
+}
+
+.team-member h3 {
+	margin-top: 16px;
+	font-weight: 700;
+}
+
+.team-member p {
+	margin: 0px;
+}
+
+.try-us-container {
+	background: #E9ECEF;
+}
+
+.try-us-container p {
+	font-weight: 500;
+	width: 80%;
+	font-size: 24px;
+	margin: 0 auto;
+	margin-bottom: 16px;
+}
+
+.try-us-container i {
+	margin-right: 6px;
+}
+
+/* padding-bottom to arrange the footer properly */
+
+.about-container {
+	padding-bottom: 80px;
+}

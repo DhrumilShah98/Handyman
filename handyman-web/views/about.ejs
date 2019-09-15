@@ -1,0 +1,81 @@
+<% include partials/header %>
+
+<meta name="description"
+	content="Handyman: About Us: Handyman aims to provide the small-scale businesses a platform to share their services directly with the customers at affordable rates.">
+<title>Handyman: About Us</title>
+<link rel="stylesheet" href="/stylesheets/about.css" />
+
+<% include partials/navbar %>
+
+<div class="container about-container text-center">
+	<section class="jumbotron what-is-handyman-container">
+		<div class="container">
+			<h1>What is Handyman?</h1>
+			<p>HANDYMAN is a web and android based application to select&#44; view or browse through a catalogue of
+				local services such as beauty&#44; appliance repair&#44; home cleaning &amp; repairs&#44; home made food
+				and many more. Users can browse through the catalogue for the services that they require at their
+				convenience and through the comfort of their homes. Customized information about services is available
+				to the users and they can view various services in a real&#45;time environment.</p>
+		</div>
+	</section>
+
+	<section class="jumbotron objective-container">
+		<div class="container">
+			<h1>Objective</h1>
+			<p>Our aim is to provide the small&#45;scale businesses a platform to provide their services to the customer
+				as well as to provide the customer with more options to choose from for their utilization. Provide the
+				customer more options for various services offered by various vendors. Provide customer more options
+				with affordable prices.</p>
+		</div>
+	</section>
+
+	<% var teamArr = [
+			{
+				image: "team-member-1a.jpg",
+				name: "Dhrumil Shah",
+				<!-- role: "Lead Developer" -->
+			},
+			{
+				image: "team-member-2.jpg",
+				name: "Kavin Shah",
+				<!-- role: "Marketer" -->
+			},
+			{
+				image: "team-member-3.jpg",
+				name: "Rahil Shah",
+				<!-- role: "Senior Developer" -->
+			},
+			{
+				image: "team-member-4.jpg",
+				name: "Tatsat Tendulkar",
+				<!-- role: "Content Writer" -->
+			},
+		];
+		%>
+	<section class="team-container">
+		<h1>Team</h1>
+		<div class="row">
+			<% for(var i = 0 ; i < teamArr.length ; i++){ %>
+			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+				<div class="team-member">
+					<img src="./assets/images/handyman_team/<%= teamArr[i].image %>" alt="Dhrumil Shah">
+					<h3><%= teamArr[i].name %></h3>
+					<p>Co-Founder</p>
+					<!-- <p><%= teamArr[i].role %></p> -->
+				</div>
+			</div>
+			<% }; %>
+		</div>
+	</section>
+
+	<section class="jumbotron try-us-container">
+		<div class="container">
+			<p>Try us for yourself &#45; get everything you need in our starter set.</p>
+			<a class="btn btn-outline-info btn-lg" href="/services">
+				<i class="fas fa-tools"></i>Get Started!
+			</a>
+		</div>
+	</section>
+</div>
+
+<% include partials/footer %>

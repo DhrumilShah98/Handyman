@@ -1,0 +1,90 @@
+<% include partials/header %>
+
+<meta name="description"
+	content="Handyman: Contact Us: We would love to talk to you and explore ways in which Handyman could add value to your life.">
+<title>Handyman: Contact Us</title>
+<link rel="stylesheet" href="/stylesheets/contact.css" />
+
+<% include partials/navbar %>
+
+<div class="container contact-container text-center">
+	<section class="jumbotron cover-container">
+		<div class="container">
+			<h1>Let us know what's on your mind</h1>
+			<p>We would love to hear from you!</p>
+		</div>
+	</section>
+
+	<div class=" jumbotron cf-wrapper-container">
+		<div class="container">
+			<header class="cf-header">
+				<h1>HELLO, HANDYMAN?</h1>
+			</header>
+			<div class="cf-note">
+				We guarantee 100% security of your information.
+				Your email won&#39;t be used for spamming.
+			</div>
+			<div class="cf-details">
+				<form method="post" action="" class="contact-form">
+					<div class="cf-entry">
+						<span class="cf-icon"><i class="fas fa-user fa-2x"></i></span>
+						<input name="user_name" class="cf-textfield" type="text" placeholder="Full Name"
+							required></input>
+					</div>
+					<div class="cf-entry">
+						<span class="cf-icon"><i class="fas fa-envelope fa-2x"></i></span>
+						<input name="user_email" class="cf-textfield" type="text" placeholder="Email" required>
+					</div>
+					<div class="cf-entry">
+						<span class="cf-icon"><i class="fas fa-mobile fa-2x"></i></span>
+						<input name="user_mobile" class="cf-textfield" type="text" placeholder="Mobile" required>
+					</div>
+					<div class="cf-entry">
+						<span class="cf-icon"><i class="fas fa-info fa-2x"></i></span>
+						<input name="user_subject" class="cf-textfield" type="text" placeholder="Subject" required>
+					</div>
+					<div class="cf-entry">
+						<span class="cf-icon"><i class="fa fa-comment fa-2x"></i></span>
+						<textarea name="user_message" class="cf-textfield" name="comments" rows="8"
+							placeholder="Message" required></textarea>
+					</div>
+					<div class="cf-entry-send">
+						<button class="btn btn-outline-light btn-lg" type="submit">
+							<i class="far fa-paper-plane"></i>Send
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="jumbotron get-in-touch-container">
+		<div class="container">
+			<div class="row">
+				<div class="get-in-touch-column col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<span class="icon-background"><i class="fas fa-map-marker-alt fa-3x"></i></span>
+					<h1>Address</h1>
+					<p> Address of our location </p>
+				</div>
+				<div class="get-in-touch-column col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<span class="icon-background"><i class="fas fa-phone fa-3x"></i></span>
+					<h1>On-call Support</h1>
+					<p>(+91) contact-no-1</p>
+					<p>(+91) contact-no-2</p>
+					<p>(+91) contact-no-3</p>
+					<p>(+91) contact-no-4</p>
+				</div>
+				<div class="get-in-touch-column col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<span class="icon-background"><i class="fas fa-envelope fa-3x"></i></span>
+					<h1>Email</h1>
+					<p>email-no-1</p>
+					<a role="button" rel="external" style="background: #3C88C2; margin-top: 8px"
+						class="btn btn-sm btn-primary" href="mailto:email-no-1">
+						<i class="fa fa-envelope"></i> Email Us</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include partials/footer %>

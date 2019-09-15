@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<title>Handyman: Edit Comment</title>
+<link rel="stylesheet" href="/stylesheets/image_style.css" />
+<link rel="stylesheet" href="/stylesheets/form.css" />
+
+<% include ../partials/navbar %>
+
+<div class="container form-content">
+    <div class="vendor-image-div">
+        <div class="vendor-image"><img src="<%= vendor.image %>" alt="This is vendor's profile image"></div>
+    </div>
+    <h2 class="text-center">Edit comment for <strong><%= vendor.fname %> <%= vendor.lname %></strong></h2>
+    <div class="form-container">
+        <form
+            action="/<%= vendor.service %>/<%= vendor.subservice %>/<%= vendor._id %>/comments/<%= comment._id %>?_method=PUT"
+            method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="comment[text]" value="<%= comment.text %>" required>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+            </div>
+        </form>
+        <a href="/<%= vendor.service %>/<%= vendor.subservice %>/<%= vendor._id %>">Go Back!</a>
+    </div>
+</div>
+
+<% include ../partials/footer %>
